@@ -56,7 +56,11 @@ export default class App extends Component {
             <FlatList
               data={todos}
               renderItem={({ item }) => (
-                <TodoItem item={item} pressHandler={this.pressHandler} />
+                <TodoItem
+                  arr={this.arr}
+                  item={item}
+                  pressHandler={this.pressHandler}
+                />
               )}
             />
           </View>
